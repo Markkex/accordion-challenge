@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+p {
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.faq-title {
+  font-weight: 700;
+  color: rgb(74, 75, 94);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(74, 75, 94);
+}
+
+.faq-text {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(29, 30, 53);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.background {
+  background: linear-gradient(
+    180deg,
+    hsl(273, 75%, 66%) 13%,
+    hsl(240, 73%, 65%) 100%
+  );
+}
+
+.faq-container {
+  background-color: white;
+  border-radius: 25px;
+}
+
+.container {
+  min-height: 100vh;
+  margin: 0% 10%;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.width-equal {
+  width: 50%;
+}
+
+.faq-text {
+  height: 0;
+  overflow: hidden;
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  border-bottom: solid 1px rgb(231, 231, 233);
+  cursor: pointer;
+
+  transition: 2s;
+}
+
+.faq-section.active {
+  overflow: hidden;
+}
+
+.faq-section.active .faq-text {
+  height: 3rem;
+  padding: 10px 0;
+  transition: 0.5s;
+}
+
+.faq-section:hover .faq-title {
+  color: hsl(14, 88%, 65%);
+}
+
+.faq-section.active .faq-title {
+  margin: 0.5rem 0;
+  color: black;
+  font-weight: 600;
+}
+
+.faq-section.active .arrow {
+  transform: rotate(-180deg);
+  transition: 1s;
+}
+
+.faq-section .arrow {
+  transform: rotate(0deg);
+  transition: 2s;
+}
+
+.faq-section .faq-text {
+  height: 0;
+  transition: 1s;
+}
+
+@keyframes rotatetop {
+  100% {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .faq-container {
+    max-width: 800px px;
+    height: 48vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 10% 10% 10%;
+    width: 30vh;
+  }
+
+  .images-container {
+    height: 100%;
+  }
+
+  .width-equal {
+    width: 100%;
+  }
+
+  .bg-pattern {
+    position: absolute;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 64%;
+    background-position: left 2rem top 0rem;
+    width: 40vh;
+    height: 40vh;
+    left: 0;
+    top: 0;
+  }
+
+  .woman-img {
+    position: absolute;
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: left 3rem top 0rem;
+    height: 20vh;
+    z-index: 1;
+    top: -130px;
+    left: 1rem;
+    width: 60vw;
+  }
+  .position-image {
+    display: none;
+  }
+  .faq-info-container h4 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .faq-container {
+    max-width: 1020px;
+    display: flex;
+    height: 40vh;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .bg-pattern {
+    position: relative;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: left -35rem top -19rem;
+    height: 100%;
+  }
+
+  .bg-pattern-img {
+    width: 30vh;
+  }
+
+  .woman-img {
+    position: relative;
+    background-image: url(./images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: left -6rem top 4rem;
+    height: 100%;
+  }
+
+  .position-image {
+    position: relative;
+    top: 13.5rem;
+    left: -5.8rem;
+  }
+
+  .faq-info-container {
+    padding: 0 8rem 6rem 0;
+  }
+}
